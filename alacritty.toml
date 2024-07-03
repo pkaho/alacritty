@@ -23,23 +23,6 @@ bold = { family = "FiraCode Nerd Font", style = "Bold" }
 italic = { family = "FiraCode Nerd Font", style = "Italic" }
 size = 13
 
-[[hints.enabled]]
-# command = "xdg-open" # On Linux/BSD
-# command = "open" # On macOS
-command = { program = "cmd", args = [ "/c", "start", "" ] } # On Windows
-hyperlinks = true
-post_processing = true
-persist = false
-mouse.enabled = true
-binding = { key = "e", mods = "alt" }
-regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
-
-[[hints.enabled]]
-action = "Copy"
-binding = { key = "h", mods = "alt" }
-regex = "[a-f0-9]{6,}"
-
-
 [window]
 dimensions = { columns = 75, lines = 25 }
 position = { x = 800, y = 200 }
@@ -47,7 +30,7 @@ startup_mode = "Windowed"
 title = "装逼让你飞起来"
 dynamic_title = false
 decorations_theme_variant = "None"
-decorations = "Full" # None, Full
+decorations = "Full"                      # None, Full
 opacity = 0.9
 blur = true
 
@@ -55,23 +38,39 @@ blur = true
 history = 10000
 multiplier = 3
 
-[colors.cursor]
-text = "#000000"
-cursor = "#ff8f5f"
+[colors]
+cursor = { text = "#000000", cursor = "#ff8f5f" }
+footer_bar = { foreground = "#ff8f5f", background = "#000000" }
 
 [bell]
 animation = "Linear"
 duration = 0
 
+[[hints.enabled]]
+action = "Copy"
+binding = { key = "h", mods = "alt" }
+regex = "[a-f0-9]{6,}"
+
+[[hints.enabled]]
+# command = "xdg-open" # On Linux/BSD
+# command = "open" # On macOS
+command = { program = "cmd", args = ["/c", "start", ""] }                                                                                                 # On Windows
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+binding = { key = "e", mods = "alt" }
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+
 [keyboard]
 # mode = "AppCursor" | "AppKeypad" | "Search" | "Alt" | "Vi"
 bindings = [
-  { key = "b",     mods = "alt",           action = "Minimize"         },
-  { key = "Enter", mods = "alt",           action = "ToggleFullscreen" },
-  { key = "n",     mods = "alt",           action = "ToggleMaximized" },
-  { key = "m",     mods = "alt",           action = "ToggleMaximized" },
-  { key = "n",     mods = "Control|Shift", action = "CreateNewWindow"  },
-  { key = " ",     mods = "Control|Shift", action = "ToggleViMode"  },
+  { key = "b", mods = "alt", action = "Minimize" },
+  { key = "Enter", mods = "alt", action = "ToggleFullscreen" },
+  { key = "n", mods = "alt", action = "ToggleMaximized" },
+  { key = "m", mods = "alt", action = "ToggleMaximized" },
+  { key = "n", mods = "Control|Shift", action = "CreateNewWindow" },
+  { key = " ", mods = "Control|Shift", action = "ToggleViMode" },
 
   # Search
   { key = "h", mods = "Control|Shift|Alt", mode = "Search", action = "CreateNewWindow" },
