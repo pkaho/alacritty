@@ -30,7 +30,7 @@ title = "Putty"
 dynamic_title = false
 decorations_theme_variant = "None"
 decorations = "Full"                      # None, Full
-opacity = 0.9
+opacity = 0.8
 blur = true
 
 [scrolling]
