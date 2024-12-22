@@ -1,9 +1,8 @@
 [general]
 import = [
   "~/AppData/Roaming/alacritty/dark_pride.toml",
-  "~/AppData/Roaming/alacritty/seashells.toml",
-  "~/AppData/Roaming/alacritty/solarized_light.toml",
   "~/AppData/Roaming/alacritty/ubuntu.toml",
+  "~/AppData/Roaming/alacritty/seashells.toml",
 ]
 live_config_reload = true
 working_directory = "None"
