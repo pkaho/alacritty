@@ -1,78 +1,98 @@
 [general]
 import = [
-  "~/AppData/Roaming/alacritty/dark_pride.toml",
-  "~/AppData/Roaming/alacritty/seashells.toml",
   "~/AppData/Roaming/alacritty/ubuntu.toml",
+  "~/AppData/Roaming/alacritty/dark_pride.toml",
 ]
-live_config_reload = true
 working_directory = "None"
+live_config_reload = true
 
-[terminal.shell]
-program = "pwsh"
-args = ["-l"]
-
-[env]
-TERM = "xterm-256color"
-
-[font]
-normal = { family = "FiraCode Nerd Font", style = "Light"   }  # Regular, Light
-bold   = { family = "FiraCode Nerd Font", style = "Bold"    }
-italic = { family = "FiraCode Nerd Font", style = "Italic"  }
-
-size = 14
 
 [window]
 dimensions = { columns = 75, lines = 25 }
-position = { x = 800, y = 200 }
-startup_mode = "Windowed"
-title = "Putty"
-dynamic_title = false
-decorations_theme_variant = "Light"  # Dark, Light, None 设置标题栏颜色
-decorations = "None" # None, Full 边框和标题栏
+position = { x = 800, y = 200 }           # has no effect on Wayland
+padding = { x = 0, y = 0 }
+dynamic_padding = false
+decorations = "Full"                      # None, Full 边框和标题栏
 opacity = 1
 blur = true
+startup_mode = "Windowed"
+title = "Alacritty"
+dynamic_title = true
+decorations_theme_variant = "Light"       # Dark, Light, None 设置标题栏颜色
+
 
 [scrolling]
 history = 10000
 multiplier = 3
 
+
+[font]
+normal = { family = "FiraCode Nerd Font", style = "Regular" } # Regular, Light
+bold = { family = "FiraCode Nerd Font", style = "Bold" }
+italic = { family = "FiraCode Nerd Font", style = "Italic" }
+size = 14
+offset = { x = 1, y = 0 }                                     # x 修改字符间距，y修改行间距
+glyph_offset = { x = 0, y = 0 }                               # 增大 x 字形向右移动，增大 y 字形向上移动
+
+
 [colors]
 cursor = { text = "#000000", cursor = "#ff8f5f" }
 footer_bar = { foreground = "#ff8f5f", background = "#000000" }
 
+
 [bell]
 animation = "Linear"
-duration = 0
+duration = 3         # 闪烁时间，0为禁用
+color = "#ffffff"
+command = "None"     # bell 被出发就执行这里的命令
+
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+
+[terminal]
+shell = { program = "pwsh", args = ["-wd ~/Desktop/"] }
+
+
+[mouse]
+hide_when_typing = true
+bindings = [
+  { mouse = "Right", action = "Paste" },
+  { mouse = "Left",  action = "Copy"  },
+]
+
 
 [[hints.enabled]]
-action = "Copy"
-binding = { key = "h", mods = "alt" }
+action = "copy"
+binding = { key = "h", mods = "Alt" }
 regex = "[a-f0-9]{6,}"
 
 [[hints.enabled]]
-# command = "xdg-open" # On Linux/BSD
-# command = "open" # On macOS
-command = { program = "cmd", args = ["/c", "start", ""] }                                                                                                 # On Windows
+# command = "xdg-open" # on linux/bsd
+# command = "open" # on macos
+command = { program = "cmd", args = ["/c", "start", ""] }                                                                                                 # on windows
 hyperlinks = true
 post_processing = true
 persist = false
 mouse.enabled = true
-binding = { key = "e", mods = "alt" }
-regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+binding = { key = "e", mods = "Alt" }
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001f\u007f-\u009f<>\"\\s{-}\\^⟨⟩`]+"
 
 [keyboard]
-# mode = "AppCursor" | "AppKeypad" | "Search" | "Alt" | "Vi"
+# mode = "appcursor" | "appkeypad" | "search" | "Alt" | "vi"
 bindings = [
-  { key = "Enter", mods = "alt", action = "ToggleFullscreen" },
-  { key = "b", mods = "alt", action = "Minimize" },
-  { key = "n", mods = "alt", action = "ToggleMaximized" },
-  { key = "m", mods = "alt", action = "ToggleMaximized" },
+  { key = "Enter", mods = "Alt", action = "ToggleFullscreen" },
+  { key = "b", mods = "Alt", action = "Minimize" },
+  { key = "n", mods = "Alt", action = "ToggleMaximized" },
+  { key = "m", mods = "Alt", action = "ToggleMaximized" },
   { key = "n", mods = "Control|Shift", action = "CreateNewWindow" },
   { key = " ", mods = "Control|Shift", action = "ToggleViMode" },
 
-  # Search
+  # search
   { key = "h", mods = "Control|Shift|Alt", mode = "Search", action = "CreateNewWindow" },
 
-  # Vi
-  { key = "o", mode = "Vi", action = "Open" },
+  # vi
+  { key = "o", mode = "vi", action = "Open" },
 ]
