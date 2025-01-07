@@ -1,8 +1,8 @@
 [general]
 import = [
   "~/AppData/Roaming/alacritty/dark_pride.toml",
-  "~/AppData/Roaming/alacritty/ubuntu.toml",
   "~/AppData/Roaming/alacritty/seashells.toml",
+  "~/AppData/Roaming/alacritty/ubuntu.toml",
 ]
 live_config_reload = true
 working_directory = "None"
@@ -15,11 +15,11 @@ args = ["-l"]
 TERM = "xterm-256color"
 
 [font]
-normal = { family = "FiraCode Nerd Font", style = "Regular" }
+normal = { family = "FiraCode Nerd Font", style = "Light"   }  # Regular, Light
 bold   = { family = "FiraCode Nerd Font", style = "Bold"    }
 italic = { family = "FiraCode Nerd Font", style = "Italic"  }
 
-size = 13
+size = 14
 
 [window]
 dimensions = { columns = 75, lines = 25 }
@@ -27,9 +27,9 @@ position = { x = 800, y = 200 }
 startup_mode = "Windowed"
 title = "Putty"
 dynamic_title = false
-decorations_theme_variant = "None"
-decorations = "Full"                      # None, Full
-opacity = 0.8
+decorations_theme_variant = "Light"  # Dark, Light, None 设置标题栏颜色
+decorations = "None" # None, Full 边框和标题栏
+opacity = 1
 blur = true
 
 [scrolling]
