@@ -53,7 +53,7 @@ save_to_clipboard = true
 
 
 [terminal]
-shell = { program = "pwsh", args = ["-wd ~/Desktop/"] }
+shell = { program = "pwsh", args = ["-l"] }
 
 
 [mouse]
