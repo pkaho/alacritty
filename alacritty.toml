@@ -16,9 +16,9 @@ decorations = "Full"                      # None, Full 边框和标题栏
 opacity = 1
 blur = true
 startup_mode = "Windowed"
-title = "Alacritty"
-dynamic_title = true
-decorations_theme_variant = "Light"       # Dark, Light, None 设置标题栏颜色
+title = "Windows Terminal"
+dynamic_title = false
+decorations_theme_variant = "Dark"       # Dark, Light, None 设置标题栏颜色
 
 
 [scrolling]
@@ -27,9 +27,12 @@ multiplier = 3
 
 
 [font]
-normal = { family = "FiraCode Nerd Font", style = "Regular" } # Regular, Light
-bold   = { family = "FiraCode Nerd Font", style = "Bold"    }
-italic = { family = "FiraCode Nerd Font", style = "Italic"  }
+# normal = { family = "FiraCode Nerd Font", style = "Regular" } # Regular, Light
+# bold   = { family = "FiraCode Nerd Font", style = "Bold"    }
+# italic = { family = "FiraCode Nerd Font", style = "Italic"  }
+normal = { family = "Maple Mono NF", style = "Regular" } # Regular, Light
+bold   = { family = "Maple Mono NF", style = "Bold"    }
+italic = { family = "Maple Mono NF", style = "Italic"  }
 size = 14
 offset = { x = 1, y = 0 }       # x 修改字符间距，y修改行间距
 glyph_offset = { x = 0, y = 0 } # 增大 x 字形向右移动，增大 y 字形向上移动
