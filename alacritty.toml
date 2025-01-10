@@ -18,7 +18,7 @@ blur = true
 startup_mode = "Windowed"
 title = "Windows Terminal"
 dynamic_title = false
-decorations_theme_variant = "Dark"       # Dark, Light, None 设置标题栏颜色
+decorations_theme_variant = "Light"       # Dark, Light, None 设置标题栏颜色
 
 
 [scrolling]
