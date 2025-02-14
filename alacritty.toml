@@ -26,7 +26,7 @@ history = 10000
 multiplier = 3
 
 
-[font] # RobotoMono-NF, SourceCodePro-NF(SauceCodePro)
+[font] # RobotoMono-NF, IntelOneMono-NF(IntoneMono)
 normal = { family = "RobotoMono Nerd Font", style = "Regular" } # Regular, Light
 bold   = { family = "RobotoMono Nerd Font", style = "Bold"    }
 italic = { family = "RobotoMono Nerd Font", style = "Italic"  }
