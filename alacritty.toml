@@ -26,7 +26,7 @@ history = 10000
 multiplier = 3
 
 
-[font] # RobotoMono-NF, IntelOneMono-NF(IntoneMono)
+[font] # RobotoMono-NF
 normal = { family = "IntoneMono Nerd Font", style = "Regular" } # Regular, Light
 bold   = { family = "IntoneMono Nerd Font", style = "Bold"    }
 italic = { family = "IntoneMono Nerd Font", style = "Italic"  }
