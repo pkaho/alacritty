@@ -8,8 +8,8 @@ live_config_reload = true
 
 
 [window]
-dimensions = { columns = 75, lines = 25 }
-position = { x = 800, y = 200 }           # has no effect on Wayland
+dimensions = { columns = 55, lines = 20 }
+position = { x = 600, y = 150 }           # has no effect on Wayland
 padding = { x = 0, y = 0 }
 dynamic_padding = false
 decorations = "Full"                      # None, Full 边框和标题栏
