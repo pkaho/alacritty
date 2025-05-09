@@ -27,9 +27,9 @@ multiplier = 3
 
 
 [font] # IntelOneMono-NF
-normal = { family = "IntoneMono Nerd Font", style = "Regular" } # Regular, Light
-bold   = { family = "IntoneMono Nerd Font", style = "Bold"    }
-italic = { family = "IntoneMono Nerd Font", style = "Italic"  }
+normal = { family = "FiraCode Nerd Font", style = "Regular" } # Regular, Light
+bold   = { family = "FiraCode Nerd Font", style = "Bold"    }
+italic = { family = "FiraCode Nerd Font", style = "Italic"  }
 size = 14
 offset = { x = 1, y = 0 }       # x 修改字符间距，y修改行间距
 glyph_offset = { x = 0, y = 0 } # 增大 x 字形向右移动，增大 y 字形向上移动
